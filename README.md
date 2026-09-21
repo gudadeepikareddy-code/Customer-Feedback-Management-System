@@ -34,6 +34,4 @@ A web-based Customer Feedback Management System that allows users to submit and 
 ## Author
 
 Customer Feedback Management System
-## Author
 
-Customer Feedback Management System
