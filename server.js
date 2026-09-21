@@ -6,9 +6,9 @@ const app = express();
 const PORT = 3000;
 
 const dbConfig = {
-    user: "SYSTEM",
-    password: "system123",
-    connectString: "localhost/XE"
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECT_STRING
 };
 
 app.use(express.json());
