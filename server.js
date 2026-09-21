@@ -2,10 +2,6 @@ const express = require("express");
 const oracledb = require("oracledb");
 const path = require("path");
 
-oracledb.initOracleClient({
-    libDir: "C:\\Users\\Happy\\Downloads\\instantclient-basic-windows.x64-23.26.3.0.0\\instantclient_23_26"
-});
-
 const app = express();
 const PORT = 3000;
 
