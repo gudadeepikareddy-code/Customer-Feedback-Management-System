@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Customer Feedback Management System</h1>
+</header>
+
+<div class="container">
+
+    <!-- Dashboard -->
+    <div class="card">
+        <h2>Dashboard</h2>
+
+        <div class="dashboard">
+
+            <div class="box">
+                <h3 id="customerCount">0</h3>
+                <p>Customers</p>
+            </div>
+
+            <div class="box">
+                <h3 id="productCount">0</h3>
+                <p>Products</p>
+            </div>
+
+            <div class="box">
+                <h3 id="feedbackCount">0</h3>
+                <p>Feedback</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Customer -->
+
+    <div class="card">
+
+        <h2>Add Customer</h2>
+
+        <input type="number" id="customerId" placeholder="Customer ID">
+
+        <input type="text" id="customerName" placeholder="Customer Name">
+
+        <input type="email" id="customerEmail" placeholder="Email">
+
+        <input type="text" id="country" placeholder="Country">
+
+        <button onclick="addCustomer()">Add Customer</button>
+
+    </div>
+
+
+
+    <!-- Product -->
+
+    <div class="card">
+
+        <h2>Add Product</h2>
+
+        <input type="number" id="productId" placeholder="Product ID">
+
+        <input type="text" id="productName" placeholder="Product Name">
+
+        <input type="text" id="category" placeholder="Category">
+
+        <button onclick="addProduct()">Add Product</button>
+
+    </div>
+
+
+
+    <!-- Feedback -->
+
+    <div class="card">
+
+        <h2>Add Feedback</h2>
+
+        <input type="number" id="feedbackId" placeholder="Feedback ID">
+
+        <input type="number" id="feedbackCustomerId" placeholder="Customer ID">
+
+        <input type="number" id="feedbackProductId" placeholder="Product ID">
+
+        <textarea id="feedbackText" placeholder="Enter Feedback"></textarea>
+
+        <select id="sentiment">
+
+            <option>Positive</option>
+
+            <option>Negative</option>
+
+            <option>Neutral</option>
+
+        </select>
+
+        <button onclick="submitFeedback()">Submit Feedback</button>
+
+    </div>
+
+
+
+    <!-- Feedback List -->
+
+    <div class="card">
+
+        <input type="text"
+               id="searchInput"
+               placeholder="Search Feedback"
+               onkeyup="searchFeedback()">
+
+        <h2>Feedback List</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Feedback ID</th>
+
+                    <th>Customer ID</th>
+
+                    <th>Product ID</th>
+
+                    <th>Feedback</th>
+
+                    <th>Sentiment</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="feedbackTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
